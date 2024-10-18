@@ -1,4 +1,4 @@
-// Función para obtener la elección de la máquina (aleatoria)
+// Función para obtener la elección de la máquina
 function opcionMaquina() {
     const opciones = ["Piedra", "Papel", "Tijera"];
     const opcionRandom = Math.floor(Math.random() * 3);
@@ -80,7 +80,7 @@ function verEstadisticas() {
     console.log("Porcentaje de victorias:", estadisticas.porcentajeVictoria + "%");
 }
 
-// Función para mostrar el historial de partidas (solo al llamarla por consola)
+// Función para mostrar el historial de partidas
 function verHistorial() {
     const historial = JSON.parse(localStorage.getItem("historial")) || [];
 
@@ -96,7 +96,7 @@ function verHistorial() {
     }
 }
 
-// Función para reiniciar el juego (borrar estadísticas y el historial)
+// Función para reiniciar el juego 
 function reiniciarJuego() {
     localStorage.removeItem("estadisticas");
     localStorage.removeItem("historial");
@@ -141,8 +141,8 @@ function iniciarJuego() {
     }
 
     console.log("\nPara jugar, usa: jugar('Piedra'), jugar('Papel') o jugar('Tijera')");
-    console.log("Para ver tus estadísticas, usa: verEstadisticas()");
-    console.log("Para ver el historial de partidas, usa: verHistorial()");
+    console.log("Para ver las estadisticas, usa: verEstadisticas()");
+    console.log("Para ver el historial, usa: verHistorial()");
     console.log("Para reiniciar el juego, usa: reiniciarJuego()");
 }
 
